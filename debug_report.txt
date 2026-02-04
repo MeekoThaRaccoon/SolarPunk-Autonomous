@@ -1,0 +1,216 @@
+SOLARPUNK SYSTEM DIAGNOSTIC - Tue 02/03/2026 19:41:04.98 
+=========================================== 
+[1] PYTHON ENVIRONMENT 
+----------------------- 
+Python 3.13.9
+Package            Version
+------------------ ---------
+blinker            1.9.0
+certifi            2026.1.4
+charset-normalizer 3.4.4
+click              8.3.1
+colorama           0.4.6
+Flask              3.1.2
+idna               3.11
+itsdangerous       2.2.0
+Jinja2             3.1.6
+MarkupSafe         3.0.3
+numpy              2.4.2
+opencv-python      4.13.0.90
+pillow             12.1.0
+pip                25.2
+psutil             7.2.2
+python-dotenv      1.2.1
+qrcode             8.2
+requests           2.32.5
+urllib3            2.6.3
+Werkzeug           3.1.5
+ 
+[2] DIRECTORY STRUCTURE 
+----------------------- 
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.gitignore
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\agent.py
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\agent_log.txt
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\agent_simple.py
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\broken.py
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\connected
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\debug.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\debug_log.txt
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\debug_report.txt
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\DEPLOY.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\dist
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\emergency_fix.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\FIX_ALL.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\fix_github.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\FIX_REPOS.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\GITHUB_WIZARD.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\import_error.py
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\logs
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\PUSH.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\QUICK_FIX.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\quick_fix.py
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\README.md
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\recovery_agent.py
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\recovery_config.yaml
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\repo_analysis.json
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\repo_intelligence.py
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\scripts
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\self_healing_agent.py
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\setup_wizard.py
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\START.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\system_status.txt
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\test_fix.bat
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\COMMIT_EDITMSG
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\config
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\description
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\HEAD
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\index
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\info
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\logs
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\refs
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\applypatch-msg.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\commit-msg.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\fsmonitor-watchman.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\post-update.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\pre-applypatch.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\pre-commit.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\pre-merge-commit.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\pre-push.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\pre-rebase.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\pre-receive.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\prepare-commit-msg.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\push-to-checkout.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\sendemail-validate.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\hooks\update.sample
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\info\exclude
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\logs\HEAD
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\logs\refs
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\logs\refs\heads
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\logs\refs\heads\master
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\07
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\1b
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\1c
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\26
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\34
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\35
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\3c
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\3f
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\41
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\5e
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\71
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\72
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\76
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\79
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\7b
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\7d
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\7f
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\86
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\87
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\96
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\99
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\a6
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\a7
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\ad
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\b5
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\bd
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\c4
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\cb
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\dc
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\f0
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\f1
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\fa
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\info
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\pack
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\07\00d70902cc26a0616014279f76b49c71b57fad
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\1b\ffc99d27c80a45ec6bdcf0abd6ef11a46e5401
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\1c\b77c09697ea592ff743c5ada961ff00da8cfb5
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\26\e21905c61d1a5c2157ea6e7b46421da951dfa9
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\34\5000974daf2e1ffd223d6f75d2b642162f4267
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\34\5c5ae2fe4a2592776ccca433fdd2ab4715afe9
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\35\bcc668bef70c2a2c575395c1b427ff6fb032b7
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\3c\fa2a44326847e3afc81162d79973dad9d2cd7b
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\3f\00fc1f2debe6c96334ab9b6ec6d9d5a107751e
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\41\b7687a4207a4bfa70f175ca329d70b46ba00e2
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\5e\43a3fa247785138bd32370661a46c69eee49d3
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\71\e249d29780c5a642b0ceaf0654724f3fda65ba
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\72\c451513d70bb1f1b1d001f81254bfb51ef7782
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\76\2f019fb8c43fb19221818a2d8b7dc6e5a84192
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\79\b7965acd38ddce6f00be14423a026295775671
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\7b\26be79f28733d7fd2ea05be237406bb5caff58
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\7d\2b62e8a6280ea1158de34fe0a50f69a079f255
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\7f\70240d0f719465bcee3b03eb33b1d2d25ab312
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\86\6c3ebe9000591505514c95e66207dcb414bced
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\87\a7af95423e522fc06016814d21f60ac2583be8
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\96\1d69bacdc0a28def2a0a0d897ae1486f9993ea
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\99\af10175cb2954eeea8cb53bf4ef93c1177825e
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\a6\1ab37623cfd527e9f27e1ba4cd8b3969df2a12
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\a7\4910efc55e52c4317437e2740fb2cb438b7a5d
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\ad\f047262647ca5d3772291c74c646265bf724aa
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\b5\66fe6241112fc36ccf7a0f21ec3d04c1ab29cf
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\bd\4affeab5b7e3b5a04f7227a9438fc029e0740c
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\c4\22f9b76855c5fcebc2c1e52a3e09e3263bcee6
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\cb\c4ed5c51fe5f2f14a4ddcbaf0d2e941faa0597
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\dc\6bbe2bf0f664c9986dcfd387061774d9996448
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\f0\5eaac870fe59b274f35e9b3e818a510af17eeb
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\f0\a3e4d176f071dff034fb87e8e694ae66401a7b
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\f1\01723663237bf0d4d8421eaffc22e38885eef2
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\objects\fa\4da0b1cb53a7624e6fc6d9ef89680aed7669aa
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\refs\heads
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\refs\tags
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\.git\refs\heads\master
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\dist\index.html
+C:\Users\carol\SolarPunk\connected\SolarPunk-Autonomous\scripts\auto_fix.py
+ 
+[3] GIT STATUS 
+------------- 
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   debug_report.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ 
+[4] CLOUDFLARE CHECK 
+-------------------- 
+200 
+[5] PYTHON MODULE CHECK 
+----------------------- 
+  File "<string>", line 1
+    try: import flask; print('flask: OK'); except: print('flask: MISSING')
+                                           ^^^^^^
+SyntaxError: invalid syntax
+  File "<string>", line 1
+    try: import cv2; print('opencv: OK'); except: print('opencv: MISSING')
+                                          ^^^^^^
+SyntaxError: invalid syntax
+  File "<string>", line 1
+    try: import numpy; print('numpy: OK'); except: print('numpy: MISSING')
+                                           ^^^^^^
+SyntaxError: invalid syntax
+  File "<string>", line 1
+    try: import qrcode; print('qrcode: OK'); except: print('qrcode: MISSING')
+                                             ^^^^^^
+SyntaxError: invalid syntax
+ 
+[6] AGENT FILES CHECK 
+--------------------- 
+ 
+[7] KEY DIRECTORIES 
+------------------- 
+dist: EXISTS 
+ 
+[8] WINDOWS SPECIFICS 
+--------------------- 
+
+Microsoft Windows [Version 10.0.19045.6466]
+PowerShell version: 
+
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+5      1      19041  6456    
+
+
+ 
