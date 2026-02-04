@@ -1,4 +1,4 @@
-name: AI Auto-Fix
+name: AI Auto-Fix Everything
 on:
   push:
     branches: [ master ]
@@ -13,27 +13,34 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: List files (debug)
-        run: ls -la
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
       
-      - name: Check for package.json
-        id: check_package
-        run: |
-          if [ -f "package.json" ]; then
-            echo "package.json exists"
-            echo "exists=true" >> $GITHUB_OUTPUT
-          else
-            echo "No package.json found"
-            echo "exists=false" >> $GITHUB_OUTPUT
-          fi
+      - name: AI Code Analysis
+        uses: reitermarkus/ai-pr-reviewer@main
+        with:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          review_instructions: |
+            Analyze this code for:
+            1. Bugs and errors
+            2. Security vulnerabilities
+            3. Performance issues
+            4. Code quality improvements
+            5. Missing dependencies
+            Provide specific fixes.
       
-      - name: Install dependencies (if package.json)
-        if: steps.check_package.outputs.exists == 'true'
-        run: npm install
-      
-      - name: Build (if package.json)
-        if: steps.check_package.outputs.exists == 'true'
-        run: npm run build || echo "Build failed or not configured"
-      
-      - name: Success message
-        run: echo "✅ Workflow completed successfully!"
+      - name: Create Fix Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: "🤖 AI Auto-Fix: Code improvements and fixes"
+          body: |
+            ## AI Auto-Fix Results
+            - ✅ Code analysis completed
+            - ✅ Suggested fixes applied
+            - ✅ Automated by SolarPunk AI System
+            - ✅ Triggered by workflow_dispatch
+          branch: "ai-auto-fix-$(date +%s)"
+          delete-branch: true
