@@ -1,9 +1,127 @@
-name: AI Auto-Fix Test
-on: [workflow_dispatch]
+name: AI Auto-Fix Everything
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
 
 jobs:
-  test:
+  auto-fix:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Testing if GitHub Actions works"
-      - run: echo "If this passes, we can add AI"
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python for AI
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install AI dependencies
+        run: pip install openai requests
+      
+      - name: Run AI Code Fixer
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          cat > ai_fix.py << 'EOF'
+          import openai
+          import os
+          import json
+          import subprocess
+          
+          openai.api_key = os.getenv("OPENAI_API_KEY")
+          
+          print("🤖 Starting AI code analysis...")
+          
+          # Get list of files
+          result = subprocess.run(["find", ".", "-name", "*.js", "-o", "-name", "*.ts", "-o", "-name", "*.py", "-o", "-name", "*.json"], 
+                                 capture_output=True, text=True)
+          files = result.stdout.strip().split('\n')
+          files = [f for f in files if f and not any(x in f for x in ['node_modules', '.git'])]
+          
+          print(f"📁 Found {len(files)} files to analyze")
+          
+          if files:
+              # Analyze first few files
+              sample_files = files[:5]
+              file_contents = []
+              
+              for file in sample_files:
+                  try:
+                      with open(file, 'r') as f:
+                          content = f.read()[:1000]  # First 1000 chars
+                          file_contents.append(f"File: {file}\nContent:\n{content}\n")
+                  except:
+                      pass
+              
+              if file_contents:
+                  prompt = f"""Analyze these code files for issues and suggest fixes:
+                  
+                  {''.join(file_contents)}
+                  
+                  Provide:
+                  1. List of issues found
+                  2. Specific fixes for each
+                  3. Code snippets to fix them
+                  
+                  Format as markdown."""
+                  
+                  try:
+                      response = openai.ChatCompletion.create(
+                          model="gpt-3.5-turbo",
+                          messages=[{"role": "user", "content": prompt}],
+                          max_tokens=1000
+                      )
+                      
+                      analysis = response.choices[0].message.content
+                      
+                      # Create analysis report
+                      with open("AI_ANALYSIS.md", "w") as f:
+                          f.write("# 🤖 AI Code Analysis Report\n\n")
+                          f.write(analysis)
+                      
+                      print("✅ AI analysis complete! Report saved.")
+                      
+                  except Exception as e:
+                      print(f"⚠️ OpenAI error: {e}")
+                      # Create placeholder report
+                      with open("AI_ANALYSIS.md", "w") as f:
+                          f.write("# 🤖 AI Analysis\n\n")
+                          f.write("OpenAI API call failed. Check API key and quota.\n")
+          else:
+              print("📁 No code files found to analyze")
+              with open("AI_ANALYSIS.md", "w") as f:
+                  f.write("# 🤖 AI Analysis\n\n")
+                  f.write("No code files found in repository.\n")
+          
+          print("🎯 Ready for next steps!")
+          EOF
+          
+          python ai_fix.py
+      
+      - name: Create AI Fix Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: "🤖 AI Auto-Fix: Code Analysis and Recommendations"
+          body: |
+            ## AI Code Analysis Report
+            
+            This PR contains an AI analysis of the codebase with suggested fixes.
+            
+            **What's included:**
+            - ✅ Code analysis by OpenAI GPT
+            - 🔍 Issues identified
+            - 🔧 Suggested fixes
+            - 📝 Code improvements
+            
+            **Next steps:**
+            1. Review the AI_ANALYSIS.md file
+            2. Apply suggested fixes
+            3. Merge this PR to track AI recommendations
+            
+            *Generated automatically by SolarPunk AI System*
+          branch: "ai-fixes-$(date +%s)"
+          delete-branch: true
+          commit-message: "🤖 Add AI code analysis and recommendations"
