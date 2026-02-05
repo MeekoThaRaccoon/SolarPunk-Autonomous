@@ -1,7 +1,0 @@
-name: AI Auto-Fix
-on: [workflow_dispatch]
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "AI Auto-Fix workflow created!"

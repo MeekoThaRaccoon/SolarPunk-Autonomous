@@ -1,4 +1,0 @@
-# Auto-recovery configuration 
-auto_fix: true 
-check_interval: 300 
-backup_files: true 
