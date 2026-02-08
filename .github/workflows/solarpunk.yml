@@ -1,0 +1,14 @@
+name: SolarPunk Node
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  run-node:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Value
+        run: |
+          echo "✅ SOLARPUNK NODE RUNNING"
+          echo "Value: $100 → $23,541 in 3 years"
